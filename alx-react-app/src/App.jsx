@@ -24,6 +24,7 @@ function App() {
       <WelcomeMessage />
       <Header/>
       <MainContent/>
+      <Footer />
 
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
