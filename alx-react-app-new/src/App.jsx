@@ -6,9 +6,8 @@ import Header from './components/Header';
 import MainContent from './components/Maincontent';
 import Footer from './components/Footer';
 import UserProfile from './components/UserProfile';
-import Counter from './components/Counter'; 
-import ProfilePage from './ProfilePage';
-import UserContext from './UserContext';
+ 
+
 
 
 function App() {
