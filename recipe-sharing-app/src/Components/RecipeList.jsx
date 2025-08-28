@@ -1,4 +1,4 @@
-// src/components/RecipeList.jsx
+import { Link } from 'react-router-dom';
 import { useRecipeStore } from '../recipeStore';
 
 const RecipeList = () => {
@@ -10,8 +10,11 @@ const RecipeList = () => {
       {recipes.length === 0 && <p>No recipes yet. Add one!</p>}
       {recipes.map((recipe) => (
         <div key={recipe.id} style={{ marginBottom: '1rem' }}>
-          <h3>{recipe.title}</h3>
-          <p>{recipe.description}</p>
+          <h3 style={{ margin: 0 }}>
+            <Link to={`/recipes/${recipe.id}`}>{recipe.title}</Link>
+          </h3>
+          <p style={{ marginTop: '0.25rem' }}>{recipe.description}</p>
+          <Link to={`/recipes/${recipe.id}`}>View details →</Link>
         </div>
       ))}
     </div>
